@@ -5,71 +5,24 @@
     "type": "STRING"
   },
   {
-    "fields": [
-      {
-        "mode": "NULLABLE",
-        "name": "android_sdk_version",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "app_build",
-        "type": "STRING"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "app_channel",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "app_display_version",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "architecture",
-        "type": "STRING"
-      },
-      {
-        "mode": "NULLABLE",
-        "name": "client_id",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "device_manufacturer",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "device_model",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "first_run_date",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "os",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "os_version",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "telemetry_sdk_build",
-        "type": "STRING"
-      }
-    ],
+    "mode": "NULLABLE",
+    "name": "build_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "build_version",
+    "type": "STRING"
+  },
+  {
     "mode": "REQUIRED",
-    "name": "client_info",
-    "type": "RECORD"
+    "name": "cpu_arch",
+    "type": "INT64"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "creationDate",
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
@@ -77,42 +30,57 @@
     "type": "STRING"
   },
   {
+    "mode": "NULLABLE",
+    "name": "id",
+    "type": "STRING"
+  },
+  {
     "fields": [
       {
-        "mode": "REQUIRED",
-        "name": "category",
+        "mode": "NULLABLE",
+        "name": "hresult",
+        "type": "INT64"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "source_file",
         "type": "STRING"
       },
       {
-        "fields": [
-          {
-            "mode": "REQUIRED",
-            "name": "key",
-            "type": "STRING"
-          },
-          {
-            "mode": "REQUIRED",
-            "name": "value",
-            "type": "STRING"
-          }
-        ],
-        "mode": "REPEATED",
-        "name": "extra",
-        "type": "RECORD"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "name",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "timestamp",
+        "mode": "NULLABLE",
+        "name": "source_line",
         "type": "INT64"
       }
     ],
-    "mode": "REPEATED",
-    "name": "events",
+    "mode": "REQUIRED",
+    "name": "launcher_error",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "avail_page_file",
+        "type": "INT64"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "avail_phys",
+        "type": "INT64"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "avail_virt",
+        "type": "INT64"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "total_phys",
+        "type": "INT64"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "memory",
     "type": "RECORD"
   },
   {
@@ -204,6 +172,23 @@
     "type": "RECORD"
   },
   {
+    "fields": [
+      {
+        "mode": "REQUIRED",
+        "name": "key",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "value",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "modules",
+    "type": "RECORD"
+  },
+  {
     "mode": "NULLABLE",
     "name": "normalized_app_name",
     "type": "STRING"
@@ -229,67 +214,19 @@
     "type": "STRING"
   },
   {
-    "fields": [
-      {
-        "mode": "REQUIRED",
-        "name": "end_time",
-        "type": "STRING"
-      },
-      {
-        "fields": [
-          {
-            "mode": "REQUIRED",
-            "name": "key",
-            "type": "STRING"
-          },
-          {
-            "fields": [
-              {
-                "mode": "REQUIRED",
-                "name": "branch",
-                "type": "STRING"
-              },
-              {
-                "fields": [
-                  {
-                    "mode": "NULLABLE",
-                    "name": "type",
-                    "type": "STRING"
-                  }
-                ],
-                "mode": "NULLABLE",
-                "name": "extra",
-                "type": "RECORD"
-              }
-            ],
-            "mode": "REQUIRED",
-            "name": "value",
-            "type": "RECORD"
-          }
-        ],
-        "mode": "REPEATED",
-        "name": "experiments",
-        "type": "RECORD"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "ping_type",
-        "type": "STRING"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "seq",
-        "type": "INT64"
-      },
-      {
-        "mode": "REQUIRED",
-        "name": "start_time",
-        "type": "STRING"
-      }
-    ],
     "mode": "REQUIRED",
-    "name": "ping_info",
-    "type": "RECORD"
+    "name": "num_logical_cpus",
+    "type": "INT64"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "os_locale",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "os_version",
+    "type": "STRING"
   },
   {
     "mode": "NULLABLE",
@@ -297,8 +234,60 @@
     "type": "INT64"
   },
   {
+    "fields": [
+      {
+        "mode": "REPEATED",
+        "name": "antispyware",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "av",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "firewall",
+        "type": "STRING"
+      }
+    ],
+    "mode": "NULLABLE",
+    "name": "security",
+    "type": "RECORD"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "server_os",
+    "type": "BOOL"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "signatures",
+    "type": "STRING"
+  },
+  {
     "mode": "REQUIRED",
     "name": "submission_timestamp",
     "type": "TIMESTAMP"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "type",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "update_channel",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "version",
+    "type": "FLOAT64"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "xpcom_abi",
+    "type": "STRING"
   }
 ]
