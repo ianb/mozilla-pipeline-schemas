@@ -5,13 +5,60 @@
     "type": "STRING"
   },
   {
+    "fields": [
+      {
+        "mode": "REQUIRED",
+        "name": "architecture",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "buildId",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "channel",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "displayVersion",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "name",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "platformVersion",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "vendor",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "version",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "xpcomAbi",
+        "type": "STRING"
+      }
+    ],
     "mode": "REQUIRED",
-    "name": "created",
-    "type": "INT64"
+    "name": "application",
+    "type": "RECORD"
   },
   {
-    "mode": "NULLABLE",
-    "name": "device",
+    "mode": "REQUIRED",
+    "name": "creationDate",
     "type": "STRING"
   },
   {
@@ -21,7 +68,7 @@
   },
   {
     "mode": "REQUIRED",
-    "name": "locale",
+    "name": "id",
     "type": "STRING"
   },
   {
@@ -89,6 +136,33 @@
         "fields": [
           {
             "mode": "NULLABLE",
+            "name": "app_build_id",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "app_name",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "app_update_channel",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "app_version",
+            "type": "STRING"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "uri",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
             "name": "browser",
             "type": "STRING"
           },
@@ -138,33 +212,54 @@
     "type": "STRING"
   },
   {
+    "fields": [
+      {
+        "fields": [
+          {
+            "mode": "REQUIRED",
+            "name": "encoding",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "a",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "b",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REQUIRED",
+            "name": "prio",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "prioData",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "reason",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "version",
+        "type": "STRING"
+      }
+    ],
     "mode": "REQUIRED",
-    "name": "os",
-    "type": "STRING"
-  },
-  {
-    "mode": "REQUIRED",
-    "name": "osversion",
-    "type": "STRING"
-  },
-  {
-    "mode": "REQUIRED",
-    "name": "pocketId",
-    "type": "STRING"
-  },
-  {
-    "mode": "REQUIRED",
-    "name": "processStartTimestamp",
-    "type": "INT64"
+    "name": "payload",
+    "type": "RECORD"
   },
   {
     "mode": "NULLABLE",
     "name": "sample_id",
-    "type": "INT64"
-  },
-  {
-    "mode": "REQUIRED",
-    "name": "seq",
     "type": "INT64"
   },
   {
@@ -174,7 +269,12 @@
   },
   {
     "mode": "REQUIRED",
-    "name": "v",
-    "type": "INT64"
+    "name": "type",
+    "type": "STRING"
+  },
+  {
+    "mode": "REQUIRED",
+    "name": "version",
+    "type": "FLOAT64"
   }
 ]
