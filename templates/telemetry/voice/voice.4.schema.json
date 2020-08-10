@@ -224,6 +224,27 @@
         "optInAudio": {
           "title": "Has the user opted in to audio?",
           "type": "boolean"
+        },
+        "speechOutputEnabled": {
+          "title": "Was the speech output preference enabled?",
+          "type": "boolean"
+        },
+        "cardType": {
+          "title": "What kind of card was detected",
+          "description": "This is specifically relevant to speech output, but in general is the card type found in a search result",
+          "type": "string"
+        },
+        "outputSpoken": {
+          "title": "Was there speech output?",
+          "type": "boolean"
+        },
+        "outputSpokenWords": {
+          "title": "How many words were spoken?",
+          "type": "number"
+        },
+        "outputSpokenCompleted": {
+          "title": "Was the spoken output completed?",
+          "type": "boolean"
         }
       },
       "required": [

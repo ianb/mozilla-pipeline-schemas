@@ -1296,6 +1296,11 @@
           "title": "Amount of spoken time",
           "type": "integer"
         },
+        "cardType": {
+          "description": "This is specifically relevant to speech output, but in general is the card type found in a search result",
+          "title": "What kind of card was detected",
+          "type": "string"
+        },
         "country": {
           "title": "User country code",
           "type": "string"
@@ -1430,6 +1435,18 @@
           "title": "Has the user opted in to audio?",
           "type": "boolean"
         },
+        "outputSpoken": {
+          "title": "Was there speech output?",
+          "type": "boolean"
+        },
+        "outputSpokenCompleted": {
+          "title": "Was the spoken output completed?",
+          "type": "boolean"
+        },
+        "outputSpokenWords": {
+          "title": "How many words were spoken?",
+          "type": "number"
+        },
         "serverErrorIntentParser": {
           "description": "Error with the server intent parser",
           "title": "DEPRECATED",
@@ -1462,6 +1479,10 @@
           "description": "This only set if the intent dependent on the current tab in some way",
           "title": "Category of site of active tab when started",
           "type": "string"
+        },
+        "speechOutputEnabled": {
+          "title": "Was the speech output preference enabled?",
+          "type": "boolean"
         },
         "timestamp": {
           "minimum": 0,
